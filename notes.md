@@ -1,0 +1,1 @@
+ curl --header "Content-Type: application/json" --request POST --data '{"user": {"email": "illender@outlook.com", "password": "asdfasdfasdf"}}' http:/localhost:3001/sessions

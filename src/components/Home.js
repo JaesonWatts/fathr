@@ -5,8 +5,8 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home</h1>
-        <h1>This is the home component yo!</h1>
+        <h1>Dad's Chore Application-inator</h1>
+        <h1>HAVE YOU DONE YOUR CHORES??!</h1>
         <Registration />
       </div>
     );

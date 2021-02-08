@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { response } from 'express';
+// import { response } from 'express';
 
 export default class Registration extends Component {
   constructor(props) {
@@ -23,21 +23,20 @@ export default class Registration extends Component {
     } = this.state
     event.preventDefault();
     axios
-      .post(
-        "https://127.0.0.1:3001/registrations",
-        {
-          user: {
-          email: email,
-          password: password,
-          password_confirmation: password_confirmation
-          }
-        },
-        { withCredentials: true }
-      )
-    .then(response => {
-      console.log("registration response", response);
-    })
-    .catch(error => {
+      .post("http://127.0.0.1:3001/registrations",
+      {
+        user: {
+        email: email,
+        password: password,
+        password_confirmation: password_confirmation
+        }
+      },
+      { 
+        withCredentials: true 
+      })
+      .then(res => {
+      console.log("registration response", res);
+    }).catch(error => {
       console.log("registration error", error);
     });
   }
